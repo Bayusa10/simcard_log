@@ -51,9 +51,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 
+$route['main_page']					= 'UserPageController/index';
+$route['master_data_page/(:any)']	= 'UserPageController/masterDataPage/$1';
+$route['log_data_page']				= 'UserPageController/logDataPage';
+
+/*Logout - Login route*/
+$route['doLogin']					= 'main/doLogin';
+$route['doLogout']					= 'main/doLogout';
+/*Logout - Login route*/
 
 
+/* Upload File Route */
+$route['uploadFile']				= 'filehandler/uploadFile/$1';
+/* Upload File Route */
 
+
+/* User Transaction Route */
+$route['addRegionBatch']			= 'UserTransactionController/addRegionalBatch';
+$route['addRegion']					= 'UserTransactionController/addRegion';
+$route['addCityBatch']				= 'UserTransactionController/addCityBatch';
+$route['getListRegion']				= 'UserTransactionController/getListRegion';
+$route['addCity']					= 'UserTransactionController/addCity';
+$route['addSCardBatch']				= 'UserTransactionController/addSIMCardBatch';
+$route['emptyLogSCard']				= 'UserTransactionController/cleanLogSCard';
+$route['uploadLogData']				= 'UserTransactionController/insertLogSIMCard';
+$route['exportExcel']				= 'UserTransactionController/exportExcel';
+/* User Transaction Route */
 
 $route['default_controller'] = 'main';
 $route['404_override'] = '';
